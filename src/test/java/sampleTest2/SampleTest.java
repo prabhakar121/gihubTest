@@ -1,4 +1,4 @@
-package sampleTest1;
+package sampleTest2;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,12 +19,12 @@ public class SampleTest {
 	public void googleTest() throws IOException{
 		WebDriverManager.chromedriver().setup();
 		WebDriver wd = new ChromeDriver();
-		wd.get("https://www.bing.co.in/");
+		wd.get("https://www.google.co.in/");
 		wd.findElement(By.name("q")).sendKeys("dubai");
 		wd.findElement(By.name("q")).sendKeys(Keys.ENTER );
 		
 	File sh=((TakesScreenshot)wd).getScreenshotAs(OutputType.FILE);
-	FileUtils.copyFile(sh, new File("screenshotsTake/bing.png"));
+	FileUtils.copyFile(sh, new File("screenshotsTake/google.png"));
 	}
 	
 }
